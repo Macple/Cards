@@ -60,7 +60,7 @@ func (d deck) shuffle() {
 	rand.Seed(time.Now().UnixNano())
 
 	for i := range d {
-		newPos := rand.Intn(len(d) - 1)
+		newPos := rand.Intn(len(d))
 
 		d[i], d[newPos] = d[newPos], d[i]
 	}
